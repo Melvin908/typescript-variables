@@ -5,6 +5,8 @@ import './style.css';
 const appDiv: HTMLElement = document.getElementById('app');
 appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
 
+
+
 var name:string = "John"; 
 var score1:number = 50;
 var score2:number = 42.50
@@ -38,4 +40,18 @@ class Numbers {
 console.log("Global num: "+global_num)  
 console.log(Numbers.sval)   //static variable  
 var obj = new Numbers(); 
-console.log("Global num: "+obj.num_val) 
+console.log("Global num: "+obj.num_val)
+
+//OPERATORS
+var x:number = 4 
+var y = -x; 
+console.log("value of x: ",x);   
+console.log("value of y: ",y);   
+
+//Concatenation
+var msg:string = "hello"+"world" 
+console.log(msg)
+
+var num:number = -2 
+var result = num > 0 ?"positive":"non-positive" 
+console.log(result)

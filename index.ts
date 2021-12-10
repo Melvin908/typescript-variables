@@ -120,3 +120,13 @@ function addNumbers(...nums:number[]) {
 } 
 addNumbers(1,2,3) 
 addNumbers(10,10,10,10,10)
+
+
+//Default parameters
+
+function calculate_discount(price:number,rate:number = 0.70) { 
+   var discount = price * rate; 
+   console.log("Discount Amount: ",discount); 
+} 
+calculate_discount(2000) 
+calculate_discount(2500,0.30)

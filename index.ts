@@ -18,27 +18,27 @@ console.log("sum of the scores: "+sum)
 
 //Type Assertion
 var str = '1' 
-var str2:number = <number> <any> str   //str is now of type number 
+var str2:number = <number> <any> str   
 console.log(typeof(str2))
 
 //Inferred Typing
-var num = 2;    // data type inferred as  number 
+var num = 2;    
 console.log("value of num "+num); 
 num = "12";
 console.log(num);
 
 //Variable Scope
-var global_num = 12          //global variable 
+var global_num = 12         
 class Numbers { 
-   num_val = 13;             //class variable 
-   static sval = 10;         //static field 
+   num_val = 13;              
+   static sval = 10;         
    
    storeNum():void { 
-      var local_num = 14;    //local variable 
+      var local_num = 14;     
    } 
 } 
 console.log("Global num: "+global_num)  
-console.log(Numbers.sval)   //static variable  
+console.log(Numbers.sval)    
 var obj = new Numbers(); 
 console.log("Global num: "+obj.num_val)
 
@@ -56,7 +56,7 @@ var num:number = -2
 var result = num > 0 ?"positive":"non-positive" 
 console.log(result)
 
-//hile versus do..while
+//while versus do..while
 var n:number = 5 
 while(n > 5) { 
    console.log("Entered while") 
@@ -70,7 +70,7 @@ var i:number = 1
 while(i<=10) { 
    if (i % 5 == 0) {   
       console.log ("The first multiple of 5  between 1 and 10 is : "+i) 
-      break     //exit the loop if the first multiple is found 
+      break    
    } 
    i++ 
 }

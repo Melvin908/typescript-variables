@@ -56,6 +56,14 @@ var num:number = -2
 var result = num > 0 ?"positive":"non-positive" 
 console.log(result)
 
+//if else
+num = 15;
+if (num % 2 == 0) {
+  console.log('number is even');
+} else {
+  console.log('number is odd ');
+}
+
 //while versus do..while
 var n:number = 5 
 while(n > 5) { 

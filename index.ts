@@ -605,7 +605,7 @@ console.log("Interest is : "+obj.interest+" Rebate is : "+obj.rebate )
 
 //Object Literal Notation
 var person = { 
-   firstname:"Melvin, 
+   firstname:"Melvin", 
    lastname:"Cyriac" 
 }; 
  
@@ -614,7 +614,7 @@ console.log(person.lastname)
 
 //Objects as function parameters
 var person = { 
-   firstname:"Melvin, 
+   firstname:"Melvin", 
    lastname:"Cyriac" 
 }; 
 var invokeperson = function(obj: { firstname:string, lastname :string }) { 

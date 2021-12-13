@@ -130,3 +130,62 @@ function calculate_discount(price:number,rate:number = 0.70) {
 } 
 calculate_discount(2000) 
 calculate_discount(2500,0.30)
+
+// Anonymous functions with parameters
+
+var res = function (a, b) {
+   return a * b;
+};
+console.log(res(12, 2));
+
+
+//function constructor
+
+var myFunction = new Function("a", "b", "return a * b"); 
+var x = myFunction(4, 3); 
+console.log(x);
+
+//recrusion
+
+function factorial(number) {
+   if (number <= 0) {         
+      return 1; 
+   } else {     
+      return (number * factorial(number - 1));     
+   } 
+}; 
+console.log(factorial(6));
+
+//annonymous recrusion 
+
+(function () { 
+   var x = "Hello!!";   
+   console.log(x)     
+})()
+
+
+//Lambda function
+
+var foo = (x:number)=>10 + x 
+console.log(foo(100))
+
+//Parameter type Inference
+
+var func = (x)=> { 
+   if(typeof x=="number") { 
+      console.log(x+" is numeric") 
+   } else if(typeof x=="string") { 
+      console.log(x+" is a string") 
+   }  
+} 
+func(10) 
+func("Tomy")
+
+//function overload
+
+function disp(x, y) {
+   console.log(x);
+   console.log(y);
+}
+//  disp("abc");
+disp(1, "xyz");

@@ -648,4 +648,19 @@ function addPoints(p1:IPoint,p2:IPoint):IPoint {
 var newPoint = addPoints({x:3,y:4},{x:5,y:1})  
 
 //Error 
-var newPoint2 = addPoints({x:1},{x:4,y:3})    
+var newPoint2 = addPoints({x:1},{x:4,y:3})  
+
+
+//------MODULES--------
+
+
+module TutorialPoint { 
+   export function add(x, y) {  
+      console.log(x+y); 
+   } 
+}
+
+namespace TutorialPoint { 
+   export function add(x, y) { console.log(x + y);} 
+}
+

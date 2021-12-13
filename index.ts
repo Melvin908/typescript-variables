@@ -612,3 +612,13 @@ var person = {
 console.log(person.firstname) 
 console.log(person.lastname)
 
+//Objects as function parameters
+var person = { 
+   firstname:"Tom", 
+   lastname:"Hanks" 
+}; 
+var invokeperson = function(obj: { firstname:string, lastname :string }) { 
+   console.log("first name :"+obj.firstname) 
+   console.log("last name :"+obj.lastname) 
+} 
+invokeperson(person) 

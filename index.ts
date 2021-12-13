@@ -563,3 +563,52 @@ class Leaf extends Child {}
 var obj = new Leaf(); 
 obj.str ="hello" 
 console.log(obj.str)
+
+//Class inheritance and Method Overriding
+
+class PrinterClass { 
+   doPrint():void {
+      console.log("doPrint() from Parent called…") 
+   } 
+} 
+
+class StringPrinter extends PrinterClass { 
+   doPrint():void { 
+      super.doPrint() 
+      console.log("doPrint() is printing a string…")
+   } 
+} 
+
+var obj = new StringPrinter() 
+obj.doPrint()
+
+
+//Classes and Interfaces
+interface ILoan { 
+   interest:number 
+} 
+
+class AgriLoan implements ILoan { 
+   interest:number 
+   rebate:number 
+   
+   constructor(interest:number,rebate:number) { 
+      this.interest = interest 
+      this.rebate = rebate 
+   } 
+} 
+
+var obj = new AgriLoan(10,1) 
+console.log("Interest is : "+obj.interest+" Rebate is : "+obj.rebate )
+
+//OBJECTS
+
+//Object Literal Notation
+var person = { 
+   firstname:"Tom", 
+   lastname:"Hanks" 
+}; 
+ 
+console.log(person.firstname) 
+console.log(person.lastname)
+

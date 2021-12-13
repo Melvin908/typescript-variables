@@ -183,9 +183,9 @@ func("Tomy")
 
 //function overload
 
-function disp(x, y) {
-   console.log(x);
-   console.log(y);
-}
-//  disp("abc");
-disp(1, "xyz");
+function disp(x:any,y?:any):void { 
+   console.log(x); 
+   console.log(y); 
+} 
+disp("abc") 
+disp(1,"xyz");

@@ -189,3 +189,377 @@ function disp(x:any,y?:any):void {
 } 
 disp("abc") 
 disp(1,"xyz");
+
+//NUMBERS
+//NaN
+var month = 11 
+if( month<=0 || month >12) { 
+   month = Number.NaN 
+   console.log("Month is "+ month) 
+} else { 
+   console.log("Value Accepted..") 
+}
+
+//prototype
+function employee(id:number,name:string) { 
+   this.id = id 
+   this.name = name 
+} 
+
+var emp = new employee(125,"Arun") 
+employee.prototype.email = "arun@abc.com" 
+
+console.log("Employee 's Id: "+emp.id) 
+console.log("Employee's name: "+emp.name) 
+console.log("Employee's Email ID: "+emp.email)
+
+//strings
+//indexOf()
+var str1 = new String( "This is string one" ); 
+ 
+var index = str1.indexOf( "string" ); 
+console.log("indexOf found String :" + index );   
+
+var index = str1.indexOf( "one" ); 
+console.log("indexOf found String :" + index );
+
+//slice
+var str = "Apples are round, and apples are juicy."; 
+var sliced = str.slice(3, -2); 
+console.log(sliced);
+
+//toLocaleUpperCase()
+var str = "Apples are round, and Apples are Juicy."; 
+console.log(str.toLocaleUpperCase( ));
+
+//ARRAY
+//Simple Array
+var x:string[]; 
+x = ["1","2","3","4"] 
+console.log(x[0]); 
+console.log(x[1]);
+
+var nums:number[] = [1,2,3,3] 
+console.log(nums[0]); 
+console.log(nums[1]); 
+console.log(nums[2]); 
+console.log(nums[3]);
+
+//array object
+var arr_names:number[] = new Array(4)  
+
+for(var i = 0;i<arr_names.length;i++) { 
+   arr_names[i] = i * 2 
+   console.log(arr_names[i]) 
+}
+
+//Array Constructor accepts comma separated values
+var names:string[] = new Array("aa","bb","cc","dd") 
+
+for(var i = 0;i<names.length;i++) { 
+   console.log(names[i]) 
+}
+
+//array destructuring
+var arr:number[] = [500,600] 
+var[x,y] = arr 
+console.log(x) 
+console.log(y)
+
+//array traversal using for…in loop
+var j:any; 
+var nums:number[] = [2501,2502,2503,2504] 
+
+for(j in nums) { 
+   console.log(nums[j]) 
+} 
+
+//TUPLES
+var mytuple = [10,"Melvin"];  
+console.log(mytuple[0]) 
+console.log(mytuple[1])
+
+//Empty Tuple
+var tup = [] 
+tup[0] = 12 
+tup[1] = 23 
+
+console.log(tup[0]) 
+console.log(tup[1])
+
+//Tuple Operations
+var mytuple = [10,"Hello","World","typeScript"]; 
+console.log("Items before push "+mytuple.length)  
+
+mytuple.push("Tuple")                                    
+console.log("Items after push "+mytuple.length) 
+console.log("Items before pop "+mytuple.length) 
+console.log(mytuple.pop()+" popped from the tuple") 
+  
+console.log("Items after pop "+mytuple.length)
+
+//updating tuple
+var mytuple = [10,"Hello","World","typeScript"]; 
+console.log("Tuple value at index 0 "+mytuple[0]) 
+
+ 
+mytuple[0] = 121     
+console.log("Tuple value at index 0 changed to   "+mytuple[0])
+
+//destructuring
+var a =[10,"hello"] 
+var [b,c] = a 
+console.log( b )    
+console.log( c )
+
+//	forEach()
+let nume = [7, 8, 9];
+nume.forEach(function (value) {
+  console.log(value);
+});
+
+//some()
+function isBigEnough(element, index, array) { 
+   return (element >= 10); 
+          
+} 
+          
+var retval = [2, 5, 8, 1, 4].some(isBigEnough);
+console.log("Returned value is : " + retval ); 
+          
+var retval = [12, 5, 8, 1, 4].some(isBigEnough); 
+console.log("Returned value is : " + retval );
+
+//join()
+
+var arr = new Array("First","Second","Third"); 
+          
+var str = arr.join(); 
+console.log("str : " + str );  
+          
+var str = arr.join(", "); 
+console.log("str : " + str );  
+          
+var str = arr.join(" + "); 
+console.log("str : " + str );
+
+//push()
+
+var numbers = new Array(1, 4, 9); 
+var length = numbers.push(10); 
+console.log("new numbers is : " + numbers );  
+length = numbers.push(20); 
+console.log("new numbers is : " + numbers );
+
+//reduce()
+
+var total = [0, 1, 2, 3].reduce(function(a, b){ return a + b; }); 
+console.log("total is : " + total );
+
+//slice()
+
+var arr = ["orange", "mango", "banana", "sugar", "tea"]; 
+console.log("arr.slice( 1, 2) : " + arr.slice( 1, 2) );  
+console.log("arr.slice( 1, 3) : " + arr.slice( 1, 3) );
+
+//splice()
+
+var arr = ["orange", "mango", "banana", "sugar", "tea"];  
+var removed = arr.splice(2, 0, "water");  
+console.log("After adding 1: " + arr );  
+console.log("removed is: " + removed); 
+          
+removed = arr.splice(3, 1);  
+console.log("After removing 1: " + arr );  
+console.log("removed is: " + removed);
+
+//UNION
+var val:string|number 
+val = 12 
+console.log("numeric value of val "+val) 
+val = "This is a string" 
+console.log("string value of val "+val)
+
+//Union Type and function parameter
+function disp(name:string|string[]) { 
+   if(typeof name == "string") { 
+      console.log(name) 
+   } else { 
+      var i; 
+      
+      for(i = 0;i<name.length;i++) { 
+         console.log(name[i])
+      } 
+   } 
+} 
+disp("mark") 
+console.log("Printing names array....") 
+disp(["Mark","Tom","Mary","John"])
+
+//Union Type and Array
+var arr:number[]|string[]; 
+var i:number; 
+arr = [1,2,4] 
+console.log("**numeric array**")  
+
+for(i = 0;i<arr.length;i++) { 
+   console.log(arr[i]) 
+}  
+
+arr = ["Mumbai","Pune","Delhi"] 
+console.log("**string array**")  
+
+for(i = 0;i<arr.length;i++) { 
+   console.log(arr[i]) 
+} 
+
+//interfaces
+//
+interface IPerson { 
+   firstName:string, 
+   lastName:string, 
+   sayHi: ()=>string 
+} 
+
+var customer:IPerson = { 
+   firstName:"Melvin",
+   lastName:"Cyriac", 
+   sayHi: ():string =>{return "Hi there"} 
+} 
+
+console.log("Customer Object ") 
+console.log(customer.firstName) 
+console.log(customer.lastName) 
+console.log(customer.sayHi())  
+
+var employee:IPerson = { 
+   firstName:"Melvin",
+   lastName:"C", 
+   sayHi: ():string =>{return "Hello!!!"} 
+} 
+  
+console.log("Employee  Object ") 
+console.log(employee.firstName);
+console.log(employee.lastName);
+
+//Union Type and Interface
+interface RunOptions { 
+   program:string; 
+   commandline:string[]|string|(()=>string); 
+} 
+
+
+var options:RunOptions = {program:"test1",commandline:"Hello"}; 
+console.log(options.commandline)  
+
+
+options = {program:"test1",commandline:["Hello","World"]}; 
+console.log(options.commandline[0]); 
+console.log(options.commandline[1]);  
+
+
+options = {program:"test1",commandline:()=>{return "**Hello World**";}}; 
+
+var fn:any = options.commandline; 
+console.log(fn());
+
+//Simple Interface Inheritance
+interface Person { 
+   age:number 
+} 
+
+interface Musician extends Person { 
+   instrument:string 
+} 
+
+var drummer = <Musician>{}; 
+drummer.age = 27 
+drummer.instrument = "Drums" 
+console.log("Age:  "+drummer.age);
+console.log("Instrument:  "+drummer.instrument);
+
+//Multiple Interface Inheritance
+interface IParent1 { 
+   v1:number 
+} 
+
+interface IParent2 { 
+   v2:number 
+} 
+
+interface Child extends IParent1, IParent2 { } 
+var Iobj:Child = { v1:12, v2:23} 
+console.log("value 1: "+this.v1+" value 2: "+this.v2)
+
+//CLASSES
+//Declaring a class
+class Car { 
+   
+   engine:string; 
+ 
+   
+   constructor(engine:string) { 
+      this.engine = engine 
+   }  
+
+   
+   disp():void { 
+      console.log("Engine is  :   "+this.engine) 
+   } 
+}
+
+//
+class Cars { 
+   
+   engine:string; 
+   
+    
+   constructor(engine:string) { 
+      this.engine = engine 
+   }  
+   
+    
+   disp():void { 
+      console.log("Function displays Engine is  :   "+this.engine) 
+   } 
+} 
+
+
+var obj = new Cars("XXSY1")
+
+
+console.log("Reading attribute value Engine as :  "+obj.engine)  
+
+
+obj.disp()
+
+//Class Inheritance
+
+class Shape { 
+   Area:number 
+   
+   constructor(a:number) { 
+      this.Area = a 
+   } 
+} 
+
+class Circle extends Shape { 
+   disp():void { 
+      console.log("Area of the circle:  "+this.Area) 
+   } 
+}
+  
+var obj = new Circle(223); 
+obj.disp()
+
+//multi-level inheritance
+class Root { 
+   str:string; 
+} 
+
+class Child extends Root {} 
+class Leaf extends Child {} //indirectly inherits from Root by virtue of inheritance  
+
+var obj = new Leaf(); 
+obj.str ="hello" 
+console.log(obj.str)
